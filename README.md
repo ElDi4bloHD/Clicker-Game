@@ -1,2 +1,2 @@
 # Clicker Game
- Just a simple Clicker Game
+Just a simple Clicker Game
