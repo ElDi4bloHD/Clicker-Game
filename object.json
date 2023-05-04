@@ -1,0 +1,26 @@
+[
+    {
+        "id": "0",
+        "name" : "primo",
+        "price" : 15,
+        "rateo": 0.1
+    },
+    {
+        "id": "1",
+        "name" : "secondo",
+        "price": 100,
+        "rateo": 1
+    },
+    {
+        "id": "2",
+        "name" : "terzo",
+        "price" : 1100,
+        "rateo": 8
+    },
+    {
+        "id": "3",
+        "name" : "quarto",
+        "price" : 12000,
+        "rateo": 150
+    }
+]
