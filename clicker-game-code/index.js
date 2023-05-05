@@ -14,7 +14,6 @@ buttonContainer = document.getElementById('shop');
 jsonObj = [];
 const moltiplicatore = 1.15;
 
-
 let x = 0;
 let rat = 0;
 let intervalID;
@@ -47,11 +46,9 @@ fetch('./object.json')
 function createCallback(index) {
     return function() {
         const prezzo = parseFloat(localStorage.getItem('buttonPrize' + [index])) || parseFloat(jsonObj[index]["price"]);
-        console.log(prezzo + "cacca")
         const rateo = parseFloat(jsonObj[index]["rateo"]);
         if(parseInt(counter.innerHTML) >= prezzo){
-            const prezzoAggiornato = aggiornaPrezzo(prezzo); // aggiorna il prezzo
-            //jsonObj[index]["price"] = prezzoAggiornato; // aggiorna il prezzo nell'oggetto
+            const prezzoAggiornato = aggiornaPrezzo(prezzo);
             console.log(prezzoAggiornato)
             for(i = 0; i < jsonObj.length; i++){
                 localStorage.setItem('buttonPrize' + [index], prezzoAggiornato.toFixed(1));
@@ -64,7 +61,7 @@ function createCallback(index) {
     }
 }
 
-function oggettoComprato(prezzo, rateo, previousprezzo) {
+function oggettoComprato(prezzo, rateo) {
     localStorage.setItem('counter', x.toFixed(1));
     rat += rateo;
     localStorage.setItem('rateo', rat.toFixed(1));
@@ -101,7 +98,7 @@ function load(){
             counter.innerHTML = x.toFixed(1);
             localStorage.setItem('counter', x.toFixed(1));
         }, 1000);
-    }else {
+    } else {
         counter.innerHTML = 0;
         rateoAlSecondo.innerHTML = 0;
     }
