@@ -1,25 +1,25 @@
 [
     {
         "id": "0",
-        "name" : "primo",
+        "name" : "Sesamo",
         "price" : 15,
         "rateo": 0.1
     },
     {
         "id": "1",
-        "name" : "secondo",
+        "name" : "Hamburger",
         "price": 100,
         "rateo": 1
     },
     {
         "id": "2",
-        "name" : "terzo",
+        "name" : "Lattuce",
         "price" : 1100,
         "rateo": 8
     },
     {
         "id": "3",
-        "name" : "quarto",
+        "name" : "Ketchup",
         "price" : 12000,
         "rateo": 150
     }

@@ -37,7 +37,8 @@ fetch('./object.json')
             console.log(jsonObj[i]);
             const button = document.createElement("button");
             const prezzo = parseFloat(localStorage.getItem('buttonPrize' + [i])) || parseFloat(jsonObj[i]["price"]);
-            button.textContent = prezzo.toFixed(1);
+            console.log(jsonObj[i]["name"] + prezzo.toFixed(1) + "$")
+            button.textContent = jsonObj[i]["name"] + " " + prezzo.toFixed(1) + " $";
             button.addEventListener('click', createCallback(i));
             buttonContainer.appendChild(button);
         }
@@ -52,7 +53,7 @@ function createCallback(index) {
             console.log(prezzoAggiornato)
             for(i = 0; i < jsonObj.length; i++){
                 localStorage.setItem('buttonPrize' + [index], prezzoAggiornato.toFixed(1));
-                buttonContainer.children[index].textContent = parseFloat(localStorage.getItem('buttonPrize' + [index])).toFixed(1);
+                buttonContainer.children[index].textContent = jsonObj[index]["name"] + " " + parseFloat(localStorage.getItem('buttonPrize' + [index])).toFixed(1) + " $";
             }
             oggettoComprato(prezzoAggiornato, rateo);
             x = x - prezzo;
@@ -104,7 +105,7 @@ function load(){
     }
     for(i = 0; i < jsonObj.length; i++){
         const prezzo = parseFloat(localStorage.getItem('buttonPrize' + [i])) || parseFloat(jsonObj[i]["price"]);
-        buttonContainer.children[i].textContent = prezzo.toFixed(1);
+        buttonContainer.children[i].textContent = jsonObj[i]["name"] + " " + prezzo.toFixed(1) + " $";
     }
 }
 
@@ -118,7 +119,7 @@ function reset(){
     x = 0;
     rat = 0;
     for (let i = 0; i < jsonObj.length; i++) {
-        buttonContainer.children[i].textContent = jsonObj[i]["price"];
+        buttonContainer.children[i].textContent = jsonObj[i]["name"] + " " + jsonObj[i]["price"] + " $";
     }
     counter.innerHTML = 0;
     rateoAlSecondo.innerHTML = 0;
