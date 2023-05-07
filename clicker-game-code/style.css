@@ -1,75 +1,60 @@
-body{
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
-    text-align: center;
+body {
+  background-color: #f6f6f6;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
-  
-h2{
-    font-size: 72px;
-    margin: 0;
-    color: #333;
+
+div {
+  margin-top: 50px;
 }
-  
-button{
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
-    margin: 20px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+
+.img-button {
+  background-color: #f6f6f6;
+  background-image: url('assets/bread.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
 }
-  
-button:hover{
-    background-color: #3e8e41;
-  }
-  
-#shop{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  
-.shop-item{
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 200px;
+
+.img-button:active {
+  transform: scale(1.2);
 }
-  
-.shop-item h3{
-    font-size: 24px;
-    margin-top: 0;
-  }
-  
-.shop-item p{
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-.shop-item button{
-    background-color: #008CBA;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-.shop-item button:hover{
-    background-color: #006f8c;
+
+h2 {
+  color: #666;
+  font-size: 48px;
+  margin-top: 50px;
+}
+
+.buttons-shop {
+  margin-top: 50px;
+}
+
+.buttons-shop button {
+  background-color: #337ab7;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.buttons-shop button:hover {
+  background-color: #286090;
+}
+
+button {
+  background-color: #d9534f;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 50px;
 }
   
   
