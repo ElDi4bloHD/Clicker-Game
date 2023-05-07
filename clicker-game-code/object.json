@@ -4,21 +4,21 @@
         "name" : "Sesamo",
         "price" : 15,
         "rateo": 0.1,
-        "img" : "url('assets/sesamo2.png')"
+        "img" : "url('assets/sesamo.png')"
     },
     {
         "id": "1",
         "name" : "Hamburger",
         "price": 100,
         "rateo": 1,
-        "img" : "url('assets/sesamo2.png')"
+        "img" : "url('assets/sesamo.png')"
     },
     {
         "id": "2",
         "name" : "Lattuce",
         "price" : 1100,
         "rateo": 8,
-        "img" : "url('assets/lattuce2.png')"
+        "img" : "url('assets/lattuce.png')"
     },
     {
         "id": "3",
