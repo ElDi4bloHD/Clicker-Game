@@ -41,6 +41,8 @@ fetch('./object.json')
             button.textContent = jsonObj[i]["name"] + " " + prezzo.toFixed(1) + " $";
             button.addEventListener('click', createCallback(i));
             buttonContainer.appendChild(button);
+            buttonContainer.children[i].style.backgroundImage = jsonObj[i]["img"]; // setta la proprietà backgroundImage con il percorso specificato nel file JSON
+            console.log(jsonObj[i]["img"])
         }
     });
 
