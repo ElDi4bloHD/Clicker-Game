@@ -66,14 +66,14 @@ function createCallback(index) {
                 buttonContainer.querySelectorAll('.button-shop')[index].textContent = jsonObj[index]["name"] + " " + parseFloat(localStorage.getItem('buttonPrize' + [index])).toFixed(1) + " $";
                 document.getElementById(`livello-${index}`).textContent = "Level: " + parseFloat(localStorage.getItem('levelitem' + [index])).toFixed(1);
             }
-            oggettoComprato(prezzoAggiornato, rateo);
+            oggettoComprato(rateo);
             x = x - prezzo;
             counter.innerHTML = x.toFixed(1);
         }
     }
 }
 
-function oggettoComprato(prezzo, rateo) {
+function oggettoComprato(rateo) {
     localStorage.setItem('counter', x.toFixed(1));
     rat += rateo;
     localStorage.setItem('rateo', rat.toFixed(1));
@@ -117,7 +117,7 @@ function load(){
     for(i = 0; i < jsonObj.length; i++){
         const prezzo = parseFloat(localStorage.getItem('buttonPrize' + [i])) || parseFloat(jsonObj[i]["price"]);
         buttonContainer.querySelectorAll('.button-shop').textContent = jsonObj[i]["name"] + " " + prezzo.toFixed(1) + " $";
-        document.querySelector('p')[i].textContent = "Level: " + parseFloat(localStorage.getItem('levelitem' + [i])).toFixed(1);
+        document.getElementById(`livello-${i}`).textContent = "Level: " + parseFloat(localStorage.getItem('levelitem' + [i])).toFixed(1);
     }
 }
 
@@ -137,7 +137,8 @@ function reset(){
     rat = 0;
     for (let i = 0; i < jsonObj.length; i++) {
         buttonContainer.querySelectorAll('.button-shop').textContent = jsonObj[i]["name"] + " " + jsonObj[i]["price"] + " $";
-        document.getElementById(`livello-${i}`).textContent = "Livello: " + jsonObj[i]["level"];
+        console.log(jsonObj[i]["price"])
+        document.getElementById(`livello-${i}`).textContent = "Level: " + jsonObj[i]["level"];
     }
     counter.innerHTML = 0;
     rateoAlSecondo.innerHTML = 0;
