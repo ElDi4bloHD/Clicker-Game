@@ -114,7 +114,7 @@ function load(){
     }
     for(i = 0; i < jsonObj["object"].length; i++){
         const prezzo = parseFloat(localStorage.getItem('buttonPrize' + [i])) || parseFloat(jsonObj["object"][i]["price"]);
-        buttonContainer.querySelectorAll('.button-shop').textContent = jsonObj["object"][i]["name"] + " " + prezzo.toFixed(1) + " $";
+        buttonContainer.querySelectorAll('.button-shop')[i].textContent = jsonObj["object"][i]["name"] + " " + prezzo.toFixed(1) + " $";
         document.getElementById(`livello-${i}`).textContent = "Level: " + parseFloat(localStorage.getItem('levelitem' + [i])).toFixed(1);
     }
 }
@@ -134,8 +134,8 @@ function reset(){
     x = 0;
     rat = 0;
     for (let i = 0; i < jsonObj["object"].length; i++) {
-        buttonContainer.querySelectorAll('.button-shop').textContent = jsonObj["object"][i]["name"] + " " + jsonObj["object"][i]["price"] + " $";
-        console.log(jsonObj["object"][i]["price"])
+        buttonContainer.querySelectorAll('.button-shop')[i].textContent = jsonObj["object"][i]["name"] + " " + jsonObj["object"][i]["price"] + " $";
+        console.log(jsonObj["object"][i]["name"] + " " + jsonObj["object"][i]["price"] + " $")
         document.getElementById(`livello-${i}`).textContent = "Level: " + jsonObj["object"][i]["level"];
     }
     counter.innerHTML = 0;

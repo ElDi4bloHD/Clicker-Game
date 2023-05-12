@@ -5,7 +5,7 @@
             "name" : "Sesamo",
             "price" : 15,
             "rateo": 0.1,
-            "img" : "url('assets/sesamo.png')",
+            "img" : "url('assets/sesame.png')",
             "level" : 0
         },
         {
@@ -13,7 +13,7 @@
             "name" : "Hamburger",
             "price": 100,
             "rateo": 1,
-            "img" : "url('assets/sesamo.png')",
+            "img" : "url('assets/patty.png')",
             "level" : 0
         },
         {
@@ -21,7 +21,7 @@
             "name" : "Lattuce",
             "price" : 1100,
             "rateo": 8,
-            "img" : "url('assets/lattuce.png')",
+            "img" : "url('assets/lettuce.png')",
             "level" : 0
         },
         {
